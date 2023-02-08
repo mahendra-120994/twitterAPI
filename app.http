@@ -1,0 +1,49 @@
+POST http://localhost:3000/register/
+Content-Type: application/json
+
+{
+  "username": "adam_richard",
+  "password": "richard_567",
+  "name": "Adam Richard",
+  "gender": "male"
+}
+###
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "username":"JoeBiden",
+  "password":"biden@123"
+}
+###
+
+GET http://localhost:3000/user/tweets/feed/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.YmlkZW5AMTIz.UwxNUqtRWon7k_8NEaQ1pWC8rJZB4ubymMAe6Vo5VH0
+###
+
+GET http://localhost:3000/user/following/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.YmlkZW5AMTIz.UwxNUqtRWon7k_8NEaQ1pWC8rJZB4ubymMAe6Vo5VH0
+###
+GET http://localhost:3000/user/followers/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.YmlkZW5AMTIz.UwxNUqtRWon7k_8NEaQ1pWC8rJZB4ubymMAe6Vo5VH0
+###
+GET http://localhost:3000/tweets/:tweetId/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.YmlkZW5AMTIz.UwxNUqtRWon7k_8NEaQ1pWC8rJZB4ubymMAe6Vo5VH0
+###
+
+GET http://localhost:3000/tweets/:tweetId/likes
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.YmlkZW5AMTIz.UwxNUqtRWon7k_8NEaQ1pWC8rJZB4ubymMAe6Vo5VH0
+###
+
+GET http://localhost:3000/tweets/:tweetId/replies
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.YmlkZW5AMTIz.UwxNUqtRWon7k_8NEaQ1pWC8rJZB4ubymMAe6Vo5VH0
+###
+
+POST http://localhost:3000/user/tweets/
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.YmlkZW5AMTIz.UwxNUqtRWon7k_8NEaQ1pWC8rJZB4ubymMAe6Vo5VH0
+Content-Type: application/json
+{
+   "tweet": "The Mornings..."
+}
+
+###
